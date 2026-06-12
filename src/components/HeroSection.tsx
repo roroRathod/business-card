@@ -16,14 +16,11 @@ export default function HeroSection() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="w-full h-full rounded-full border-[3px] border-white shadow-md overflow-hidden bg-gray-100 ring-1 ring-gray-200">
-          <Image
-            src={personal.avatarPath}
-            alt={`${personal.fullName} - ${personal.title}`}
-            width={128}
-            height={128}
+        <div className="w-full h-full rounded-full border-[3px] border-white shadow-md overflow-hidden bg-gray-100 ring-1 ring-gray-200 flex items-center justify-center">
+          <img
+            src={`/business-card${personal.avatarPath}`}
+            alt="Avatar"
             className="w-full h-full object-cover scale-[1.35] object-[center_15%]"
-            priority
           />
         </div>
       </motion.div>
