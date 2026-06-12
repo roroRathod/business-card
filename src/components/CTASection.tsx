@@ -33,8 +33,13 @@ export default function CTASection() {
     } else {
       // Fallback: copy URL to clipboard
       try {
-        await navigator.clipboard.writeText(currentUrl);
-        alert("Link copied to clipboard!");
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(currentUrl);
+          alert("Link copied to clipboard!");
+        } else {
+          // Fallback for non-HTTPS dev environments where clipboard is blocked
+          alert("Sharing requires a secure connection (HTTPS). It will work in production!");
+        }
       } catch (err) {
         alert("Failed to copy link.");
       }
