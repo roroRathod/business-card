@@ -42,7 +42,7 @@ export const siteConfig = {
 
   // ── Site URL (for QR code & sharing) ───────────────────────────────────
   // Update this once you deploy. Leave empty to use vCard data for QR.
-  siteUrl: "",
+  siteUrl: "https://rororathod.github.io/business-card",
 
   // ── Capabilities (the infographic cards) ───────────────────────────────
   capabilities: [

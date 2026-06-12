@@ -22,7 +22,7 @@ export default function Home() {
       {/* Save to Contacts — placed above the infographics */}
       <div className="px-5 pb-5">
         <a
-          href="/contact.vcf"
+          href="/business-card/contact.vcf"
           className="btn-primary"
           id="save-contact-inline"
         >
